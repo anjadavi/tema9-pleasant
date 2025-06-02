@@ -2,6 +2,8 @@ import { defineConfig } from "astro/config";
 
 export default defineConfig({
   alias: {
-    "@data": "./src/data", 
+    "@data": "./src/data", output: "static",
   },
 });
+
+
