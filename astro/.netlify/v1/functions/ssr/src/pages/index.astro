@@ -1,15 +1,15 @@
 ---
-import { shirts } from "../data/shirts.js";
-const shirtProducts = shirts;
+
 ---
 
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
-    <title>Shirts</title>
+    <title>Forside</title>
     <link rel="stylesheet" href="/style.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Playfair+Display:wght@400;700&display=swap"
@@ -69,30 +69,46 @@ const shirtProducts = shirts;
     </header>
 
     <!-- MAIN -->
-    <!-- MAIN -->
-    <main class="main-listeview">
-      <section class="product-section">
-        <div class="product-header">
-          <h1>Shirts</h1>
-          <p class="header-p">
-            Giv din garderobe nyt liv med unikke shirts lavet af genbrugte
-            materialer – hver eneste shirt har sin egen karakter og er designet
-            med omtanke for både stil og planeten.
-          </p>
+    <main class="main-index">
+      <!-- HERO -->
+      <section class="hero">
+        <div class="hero-image">
+          <div class="hero-text">
+            <h1>Make Life Pleasant</h1>
+          </div>
         </div>
+        <a href="/omos" class="cta-button">Hvorfor Pleasant?</a>
+      </section>
 
-        <div class="product-grid">
-          {
-            shirts.map((product) => (
+      <!-- UPCYCLED CAPS -->
+      <section class="produktgalleri">
+        <h2>Udvalgte upcycled caps</h2>
+        <div class="produkt-grid">
+          <div class="produkt"><img src="/cap1.webp" alt="Cap" /></div>
+          <div class="produkt"><img src="/cap2.webp" alt="Cap" /></div>
+          <div class="produkt"><img src="/cap3.webp" alt="Cap" /></div>
+          <div class="produkt"><img src="/cap4.webp" alt="Cap" /></div>
+        </div>
+        <div class="se-mere">
+          <a href="/caps" class="cta-button">SE MERE</a>
+        </div>
+      </section>
 
-              <a href={`/singleview/${product.id}`} class="product-card">
-
-                <img src={product.image} alt={product.name} />
-                <p>{product.name}</p>
-                <span>{product.price} DKK</span>
-              </a>
-            ))
-          }
+      <!-- SHOP KOLLEKTION -->
+      <section class="nyheder">
+        <div class="nyhed-grid">
+          <div class="nyhed">
+            <a href="/caps">
+              <img src="/caps.kollektion.png" alt="Caps" />
+            </a>
+            <p><a href="/caps">CAPS</a></p>
+          </div>
+          <div class="nyhed">
+            <a href="/shirts">
+              <img src="/shirts.kollektion.png" alt="Caps" />
+            </a>
+            <p><a href="/shirts">SHIRTS</a></p>
+          </div>
         </div>
       </section>
     </main>

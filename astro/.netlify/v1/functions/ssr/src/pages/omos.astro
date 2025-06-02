@@ -1,15 +1,15 @@
 ---
-import { shirts } from "../data/shirts.js";
-const shirtProducts = shirts;
+
 ---
 
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
-    <title>Shirts</title>
+    <title>Om os</title>
     <link rel="stylesheet" href="/style.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Playfair+Display:wght@400;700&display=swap"
@@ -69,30 +69,66 @@ const shirtProducts = shirts;
     </header>
 
     <!-- MAIN -->
-    <!-- MAIN -->
-    <main class="main-listeview">
-      <section class="product-section">
-        <div class="product-header">
-          <h1>Shirts</h1>
-          <p class="header-p">
-            Giv din garderobe nyt liv med unikke shirts lavet af genbrugte
-            materialer – hver eneste shirt har sin egen karakter og er designet
-            med omtanke for både stil og planeten.
-          </p>
+    <main class="main-index">
+      <!-- HERO -->
+      <section class="hero-omos">
+        <div class="hero-image-omos">
+          <div class="hero-text-omos">
+            <h1>Hvorfor vælge Pleasant?</h1>
+            <p>
+              Pleasant er et tøjmærke, der upcycler og laver nyt tøj af brugt
+              tekstil.
+            </p>
+          </div>
         </div>
+      </section>
 
-        <div class="product-grid">
-          {
-            shirts.map((product) => (
+      <section class="about-section">
+        <div class="about-grid">
+          <img src="/upcycling.webp" alt="Upcycling" />
+          <div>
+            <h2>Upcycling og bæredygtighed</h2>
+            <p>
+              Pleasant har ikke købt nyt tekstil siden 2021. Alt tøj er lavet af
+              brugte tekstiler og sparer dermed CO₂, vand og kemikalier.
+            </p>
+          </div>
 
-              <a href={`/singleview/${product.id}`} class="product-card">
+          <div>
+            <h2>Miljøvenlig produktion</h2>
+            <p>
+              Transport sker med skib, tog og lastbil. Der samarbejdes med
+              Strandet, hvor knapper laves af havplast.
+            </p>
+          </div>
+          <img src="/miljøproduktion.jpg" alt="Miljøvenlig produktion" />
 
-                <img src={product.image} alt={product.name} />
-                <p>{product.name}</p>
-                <span>{product.price} DKK</span>
-              </a>
-            ))
-          }
+          <img src="/unikttøj.webp" alt="Unikke produkter" />
+          <div>
+            <h2>Unikke produkter</h2>
+            <p>
+              Hvert produkt er unikt og lavet med sans for holdbarhed og tidløst
+              design.
+            </p>
+          </div>
+
+          <div>
+            <h2>Cirkulær økonomi</h2>
+            <p>
+              Kunder kan returnere brugt Pleasant-tøj og få rabat. Vi holder
+              print- og repair-events.
+            </p>
+          </div>
+          <img src="/cirkulærøkonomi.webp" alt="Cirkulær økonomi" />
+
+          <img src="/fællesskab.webp" alt="Fællesskab" />
+          <div>
+            <h2>Fællesskab og engagement</h2>
+            <p>
+              Pleasant støtter miljøinitiativer og opfordrer kunderne til at
+              tage del i dem.
+            </p>
+          </div>
         </div>
       </section>
     </main>
