@@ -1,10 +1,11 @@
 ---
-import { caps } from "../data/caps.js";
-import { shirts } from "../data/shirts.js";
+export const prerender = false;
+
+import { caps } from "../../data/caps.js";
+import { shirts } from "../../data/shirts.js";
 
 const allProducts = [...caps, ...shirts];
-
-const id = Astro.url.searchParams.get("id");
+const { id } = Astro.params;
 const product = allProducts.find((p) => p.id === id);
 ---
 
