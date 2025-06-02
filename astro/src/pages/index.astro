@@ -2,15 +2,158 @@
 
 ---
 
+<!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Forside</title>
+    <link rel="stylesheet" href="/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Playfair+Display:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <!-- HEADER -->
+    <header class="site-header">
+      <nav class="site-nav">
+        <div class="nav-left">
+          <img src="/menu.png" alt="Menu" id="menuToggle" class="burger" />
+          <img src="/søg.png" alt="Søg" class="søg-icon" />
+        </div>
+
+        <div class="nav-logo">
+          <a href="/">
+            <img src="/pleasant-logo.webp" alt="Pleasant Logo" />
+          </a>
+        </div>
+
+        <div class="nav-center">
+          <a href="/caps">Caps</a>
+          <a href="/shirts">Shirts</a>
+          <a href="/omos">Om os</a>
+        </div>
+
+        <div class="nav-right">
+          <img src="/søg.png" alt="Søg" class="søg-desktop" />
+          <img src="/profil.png" alt="Profil" />
+          <img src="/kurv.png" alt="Kurv" />
+        </div>
+      </nav>
+
+      <div class="mobile-menu" id="mobileMenu">
+        <ul>
+          <li><a href="/caps">Caps</a></li>
+          <li><a href="/shirts">Shirts</a></li>
+          <li><a href="/omos">Om os</a></li>
+        </ul>
+      </div>
+
+      <!-- MENU JAVASCRIPT -->
+      <script is:inline>
+        setTimeout(() => {
+          const toggle = document.getElementById("menuToggle");
+          const menu = document.getElementById("mobileMenu");
+
+          if (toggle && menu) {
+            toggle.addEventListener("click", () => {
+              menu.classList.toggle("open");
+            });
+          }
+        }, 0);
+      </script>
+    </header>
+
+    <!-- MAIN -->
+    <main class="main-index">
+      <!-- HERO -->
+      <section class="hero">
+        <div class="hero-image">
+          <div class="hero-text">
+            <h1>Make Life Pleasant</h1>
+          </div>
+        </div>
+        <a href="/omos" class="cta-button">Hvorfor Pleasant?</a>
+      </section>
+
+      <!-- UPCYCLED CAPS -->
+      <section class="produktgalleri">
+        <h2>Udvalgte upcycled caps</h2>
+        <div class="produkt-grid">
+          <div class="produkt"><img src="/cap1.webp" alt="Cap" /></div>
+          <div class="produkt"><img src="/cap2.webp" alt="Cap" /></div>
+          <div class="produkt"><img src="/cap3.webp" alt="Cap" /></div>
+          <div class="produkt"><img src="/cap4.webp" alt="Cap" /></div>
+        </div>
+        <div class="se-mere">
+          <a href="/caps" class="cta-button">SE MERE</a>
+        </div>
+      </section>
+
+      <!-- SHOP KOLLEKTION -->
+      <section class="nyheder">
+        <div class="nyhed-grid">
+          <div class="nyhed">
+            <a href="/caps">
+              <img src="/caps.kollektion.png" alt="Caps" />
+            </a>
+            <p><a href="/caps">CAPS</a></p>
+          </div>
+          <div class="nyhed">
+            <a href="/shirts">
+              <img src="/shirts.kollektion.png" alt="Caps" />
+            </a>
+            <p><a href="/shirts">SHIRTS</a></p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer-section">
+      <div class="footer-inner">
+        <div class="footer-venstre">
+          <img src="/pleasant-logo-hvid.svg" alt="Pleasant Logo" />
+          <p>
+            Pleasant er et tøjmærke, der upcycler og laver nyt tøj af brugt
+            tekstil. God stil. God samvittighed.
+          </p>
+          <br />
+          <br />
+          <p>
+            <em> webshop@pleasant.dk </em>
+            <em> Svartid 1-2 hverdage </em>
+            <em> CVR-nr: 42943274 </em>
+          </p>
+        </div>
+
+        <div class="footer-midten">
+          <h4 class="footer-h4">LINKS</h4>
+          <ul>
+            <li><a href="/caps">Caps</a></li>
+            <li><a href="/shirts">Shirts</a></li>
+            <li><a href="/om-os">Om os</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-højre">
+          <h4 class="footer-h4">PLEASANT COMMUNITY</h4>
+          <input type="email" placeholder="Email" />
+          <a href="#" class="tilmed">TILMELD HER</a>
+          <ul>
+            <li>
+              <a href="#"><img src="/facebook-hvid.png" alt="Facebook" /></a>
+            </li>
+            <li>
+              <a href="#"><img src="/instagram-hvid.png" alt="Facebook" /></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+  </body>
 </html>
