@@ -1,13 +1,6 @@
 ---
-export const prerender = false;
-
-import { caps } from "../data/caps.js";
 import { shirts } from "../data/shirts.js";
-
-const allProducts = [...caps, ...shirts];
-
-const id = Astro.url.searchParams.get("id");
-const product = allProducts.find((p) => p.id === id);
+const shirtProducts = shirts;
 ---
 
 <html lang="en">
@@ -16,7 +9,7 @@ const product = allProducts.find((p) => p.id === id);
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
-    <title>Produkt</title>
+    <title>Shirts</title>
     <link rel="stylesheet" href="/style.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Playfair+Display:wght@400;700&display=swap"
@@ -60,10 +53,12 @@ const product = allProducts.find((p) => p.id === id);
         </ul>
       </div>
 
+      <!-- MENU JAVASCRIPT -->
       <script is:inline>
         setTimeout(() => {
           const toggle = document.getElementById("menuToggle");
           const menu = document.getElementById("mobileMenu");
+
           if (toggle && menu) {
             toggle.addEventListener("click", () => {
               menu.classList.toggle("open");
@@ -74,28 +69,31 @@ const product = allProducts.find((p) => p.id === id);
     </header>
 
     <!-- MAIN -->
-    {
-      product ? (
-        <main>
-          <section class="product-container">
-            <div class="product-image">
-              <img src={product.image} alt={product.name} />
-            </div>
-            <div class="product-info">
-              <h1 class="product-name">{product.name}</h1>
-              <p class="price">{product.price} DKK</p>
-              <p class="product-description">{product.description}</p>
-            </div>
-          </section>
-        </main>
-      ) : (
-        <main>
-          <p style="text-align: center; padding: 3rem;">
-            Produktet blev ikke fundet 😢
+    <!-- MAIN -->
+    <main class="main-listeview">
+      <section class="product-section">
+        <div class="product-header">
+          <h1>Shirts</h1>
+          <p class="header-p">
+            Giv din garderobe nyt liv med unikke shirts lavet af genbrugte
+            materialer – hver eneste shirt har sin egen karakter og er designet
+            med omtanke for både stil og planeten.
           </p>
-        </main>
-      )
-    }
+        </div>
+
+        <div class="product-grid">
+          {
+            shirts.map((product) => (
+              <a href={`/singleview/?id=${product.id}`} class="product-card">
+                <img src={product.image} alt={product.name} />
+                <p>{product.name}</p>
+                <span>{product.price} DKK</span>
+              </a>
+            ))
+          }
+        </div>
+      </section>
+    </main>
 
     <!-- FOOTER -->
     <footer class="footer-section">
@@ -133,7 +131,7 @@ const product = allProducts.find((p) => p.id === id);
               <a href="#"><img src="/facebook-hvid.png" alt="Facebook" /></a>
             </li>
             <li>
-              <a href="#"><img src="/instagram-hvid.png" alt="Instagram" /></a>
+              <a href="#"><img src="/instagram-hvid.png" alt="Facebook" /></a>
             </li>
           </ul>
         </div>

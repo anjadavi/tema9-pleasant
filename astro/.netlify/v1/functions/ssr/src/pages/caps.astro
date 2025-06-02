@@ -1,6 +1,6 @@
 ---
-import { shirts } from "../data/shirts.js";
-const shirtProducts = shirts;
+import { caps } from "../data/caps.js";
+const capProducts = caps;
 ---
 
 <html lang="en">
@@ -9,7 +9,7 @@ const shirtProducts = shirts;
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
-    <title>Shirts</title>
+    <title>Caps</title>
     <link rel="stylesheet" href="/style.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Playfair+Display:wght@400;700&display=swap"
@@ -73,20 +73,17 @@ const shirtProducts = shirts;
     <main class="main-listeview">
       <section class="product-section">
         <div class="product-header">
-          <h1>Shirts</h1>
+          <h1>Caps</h1>
           <p class="header-p">
-            Giv din garderobe nyt liv med unikke shirts lavet af genbrugte
-            materialer – hver eneste shirt har sin egen karakter og er designet
-            med omtanke for både stil og planeten.
+            Giv din stil kant med unikke caps lavet af genbrugte tekstiler –
+            hver eneste cap har sin egen historie og findes kun i ét eksemplar.
           </p>
         </div>
 
         <div class="product-grid">
           {
-            shirts.map((product) => (
-
-              <a href={`/singleview/${product.id}`} class="product-card">
-
+            caps.map((product) => (
+              <a href={`/singleview?id=${product.id}`} class="product-card">
                 <img src={product.image} alt={product.name} />
                 <p>{product.name}</p>
                 <span>{product.price} DKK</span>

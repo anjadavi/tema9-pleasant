@@ -1,0 +1,29 @@
+import { e as createComponent, f as createAstro, r as renderTemplate, k as renderHead, h as addAttribute } from '../chunks/astro/server_7TY4h1yB.mjs';
+import 'kleur/colors';
+import 'clsx';
+export { renderers } from '../renderers.mjs';
+
+var __freeze = Object.freeze;
+var __defProp = Object.defineProperty;
+var __template = (cooked, raw) => __freeze(__defProp(cooked, "raw", { value: __freeze(cooked.slice()) }));
+var _a;
+const $$Astro = createAstro();
+const $$Omos = createComponent(($$result, $$props, $$slots) => {
+  const Astro2 = $$result.createAstro($$Astro, $$props, $$slots);
+  Astro2.self = $$Omos;
+  return renderTemplate(_a || (_a = __template(['<html lang="en"> <head><meta charset="utf-8"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><meta name="viewport" content="width=device-width"><meta name="generator"', '><title>Om os</title><link rel="stylesheet" href="/style.css"><link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">', '</head> <body> <!-- HEADER --> <header class="site-header"> <nav class="site-nav"> <div class="nav-left"> <img src="/menu.png" alt="Menu" id="menuToggle" class="burger"> <img src="/s\xF8g.png" alt="S\xF8g" class="s\xF8g-icon"> </div> <div class="nav-logo"> <a href="/"> <img src="/pleasant-logo.webp" alt="Pleasant Logo"> </a> </div> <div class="nav-center"> <a href="/caps">Caps</a> <a href="/shirts">Shirts</a> <a href="/omos">Om os</a> </div> <div class="nav-right"> <img src="/s\xF8g.png" alt="S\xF8g" class="s\xF8g-desktop"> <img src="/profil.png" alt="Profil"> <img src="/kurv.png" alt="Kurv"> </div> </nav> <div class="mobile-menu" id="mobileMenu"> <ul> <li><a href="/caps">Caps</a></li> <li><a href="/shirts">Shirts</a></li> <li><a href="/omos">Om os</a></li> </ul> </div> <!-- MENU JAVASCRIPT --> <script>\n        setTimeout(() => {\n          const toggle = document.getElementById("menuToggle");\n          const menu = document.getElementById("mobileMenu");\n\n          if (toggle && menu) {\n            toggle.addEventListener("click", () => {\n              menu.classList.toggle("open");\n            });\n          }\n        }, 0);\n      <\/script> </header> <!-- MAIN --> <main class="main-index"> <!-- HERO --> <section class="hero-omos"> <div class="hero-image-omos"> <div class="hero-text-omos"> <h1>Hvorfor v\xE6lge Pleasant?</h1> <p>\nPleasant er et t\xF8jm\xE6rke, der upcycler og laver nyt t\xF8j af brugt\n              tekstil.\n</p> </div> </div> </section> <section class="about-section"> <div class="about-grid"> <img src="/upcycling.webp" alt="Upcycling"> <div> <h2>Upcycling og b\xE6redygtighed</h2> <p>\nPleasant har ikke k\xF8bt nyt tekstil siden 2021. Alt t\xF8j er lavet af\n              brugte tekstiler og sparer dermed CO\u2082, vand og kemikalier.\n</p> </div> <div> <h2>Milj\xF8venlig produktion</h2> <p>\nTransport sker med skib, tog og lastbil. Der samarbejdes med\n              Strandet, hvor knapper laves af havplast.\n</p> </div> <img src="/milj\xF8produktion.jpg" alt="Milj\xF8venlig produktion"> <img src="/uniktt\xF8j.webp" alt="Unikke produkter"> <div> <h2>Unikke produkter</h2> <p>\nHvert produkt er unikt og lavet med sans for holdbarhed og tidl\xF8st\n              design.\n</p> </div> <div> <h2>Cirkul\xE6r \xF8konomi</h2> <p>\nKunder kan returnere brugt Pleasant-t\xF8j og f\xE5 rabat. Vi holder\n              print- og repair-events.\n</p> </div> <img src="/cirkul\xE6r\xF8konomi.webp" alt="Cirkul\xE6r \xF8konomi"> <img src="/f\xE6llesskab.webp" alt="F\xE6llesskab"> <div> <h2>F\xE6llesskab og engagement</h2> <p>\nPleasant st\xF8tter milj\xF8initiativer og opfordrer kunderne til at\n              tage del i dem.\n</p> </div> </div> </section> </main> <!-- FOOTER --> <footer class="footer-section"> <div class="footer-inner"> <div class="footer-venstre"> <img src="/pleasant-logo-hvid.svg" alt="Pleasant Logo"> <p>\nPleasant er et t\xF8jm\xE6rke, der upcycler og laver nyt t\xF8j af brugt\n            tekstil. God stil. God samvittighed.\n</p> <br> <br> <p> <em> webshop@pleasant.dk </em> <em> Svartid 1-2 hverdage </em> <em> CVR-nr: 42943274 </em> </p> </div> <div class="footer-midten"> <h4 class="footer-h4">LINKS</h4> <ul> <li><a href="/caps">Caps</a></li> <li><a href="/shirts">Shirts</a></li> <li><a href="/om-os">Om os</a></li> </ul> </div> <div class="footer-h\xF8jre"> <h4 class="footer-h4">PLEASANT COMMUNITY</h4> <input type="email" placeholder="Email"> <a href="#" class="tilmed">TILMELD HER</a> <ul> <li> <a href="#"><img src="/facebook-hvid.png" alt="Facebook"></a> </li> <li> <a href="#"><img src="/instagram-hvid.png" alt="Facebook"></a> </li> </ul> </div> </div> </footer> </body></html>'])), addAttribute(Astro2.generator, "content"), renderHead());
+}, "/Users/anjadavidovic/kea/2sem/TEMA9/tema9-pleasant/astro/src/pages/omos.astro", void 0);
+
+const $$file = "/Users/anjadavidovic/kea/2sem/TEMA9/tema9-pleasant/astro/src/pages/omos.astro";
+const $$url = "/omos";
+
+const _page = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
+  __proto__: null,
+  default: $$Omos,
+  file: $$file,
+  url: $$url
+}, Symbol.toStringTag, { value: 'Module' }));
+
+const page = () => _page;
+
+export { page };
