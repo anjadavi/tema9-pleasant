@@ -83,7 +83,7 @@ const capProducts = caps;
         <div class="product-grid">
           {
             caps.map((product) => (
-              <a href={`/singleview?id=${product.id}`} class="product-card">
+              <a href={`/singleview/${product.id}`} class="product-card">
                 <img src={product.image} alt={product.name} />
                 <p>{product.name}</p>
                 <span>{product.price} DKK</span>
